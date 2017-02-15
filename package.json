@@ -1,10 +1,9 @@
 {
   "name": "spatomify",
   "main": "./lib/spatomify",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A short description of your package",
-  "keywords": [
-  ],
+  "keywords": [],
   "repository": "https://github.com/itotallyrock/spatomify",
   "license": "MIT",
   "engines": {
@@ -20,7 +19,8 @@
   "dependencies": {
     "node-spotify-webhelper": "0.0.5",
     "request": "^2.79.0",
-    "request-promise-native": "^1.0.3"
+    "request-promise-native": "^1.0.3",
+    "spotify-web-helper": "^1.7.0"
   },
   "devDependencies": {
     "eslint": "^3.15.0",
