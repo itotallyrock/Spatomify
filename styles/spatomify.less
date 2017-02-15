@@ -1,0 +1,30 @@
+// The ui-variables file is provided by base themes provided by Atom.
+//
+// See https://github.com/atom/atom-dark-ui/blob/master/styles/ui-variables.less
+// for a full listing of what's available.
+@import "ui-variables";
+
+.spatomify {
+  height: 100%;
+}
+
+.spatomify .album-art {
+  height: 100%;
+  width: 26px;
+  background-size: 100% !important;
+  display: inline-block;
+}
+
+.spatomify .album-art.not-found {
+  background-size: 80% !important;
+  filter: hue-rotate(45deg);
+}
+
+.song-title {
+  height: 100%;
+  max-width: 300px;
+  overflow: hidden;
+  display: inline-block;
+  margin-left: 5px;
+  line-height: 26px;
+}

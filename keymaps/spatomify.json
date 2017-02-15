@@ -1,0 +1,7 @@
+{
+  "atom-workspace": {
+    "ctrl-alt-s": "spatomify:toggle",
+    "alt-=": "spatomify:volumeup",
+    "alt--": "spatomify:volumedown"
+  }
+}
