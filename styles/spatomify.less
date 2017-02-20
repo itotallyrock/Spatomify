@@ -4,27 +4,26 @@
 // for a full listing of what's available.
 @import "ui-variables";
 
-.spatomify {
-  height: 100%;
-}
+@status-bar-height: @component-line-height + 1px;
 
-.spatomify .album-art {
-  height: @component-line-height + 1px;
-  width: @component-line-height + 1px;
+.spatomify {}
+
+.spatomify.album-art {
+  max-width: 5vw;
+  height: 100%;
+  width: @status-bar-height;
   background-size: 100% !important;
-  display: inline-block;
 }
 
-.spatomify .album-art.not-found {
-  background-size: 80% !important;
-  filter: hue-rotate(45deg);
+.spatomify.album-art.colorize {
+  animation: colorizer 20s linear infinite;
 }
 
-.song-title {
-  height: 100%;
-  max-width: 300px;
-  overflow: hidden;
-  display: inline-block;
-  margin-left: 5px;
-  line-height: @component-line-height + 1px;
+@-webkit-keyframes colorizer {
+  0%, 100%  {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  50% {
+    -webkit-filter: hue-rotate(360deg);
+  }
 }
