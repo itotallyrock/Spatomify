@@ -1,3 +1,15 @@
+## 1.0.0 - Refactor
+* Added several subclasses
+ * Song subclass for song objects
+ * AlbumArt subclass for retrieving images for a Spotify URI
+* Made pretty much everything asynchronous
+ * Most of it was already, but now it uses `async` and `await` instead of Promises directly
+* Reorganized the views class
+ * This removed a number of excessive functions
+ * Tried to make sure to keep models separate from view
+* Settings
+ * Added colorize to enable hue rotation on album art
+
 ## 0.2.0 - Optimize
 * Switched from `node-spotify-webhelper` to `spotify-web-helper`
  * This allows listening for events like song update
