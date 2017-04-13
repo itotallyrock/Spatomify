@@ -1,7 +1,7 @@
 {
-  "name": "spatomify",
+  "name": "Spatomify",
   "main": "./lib/spatomify",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A short description of your package",
   "keywords": [
     ""
@@ -22,11 +22,10 @@
     }
   },
   "dependencies": {
-    "node-spotify-webhelper": "0.0.5",
     "pluralize": "^3.1.0",
     "request": "^2.79.0",
     "request-promise-native": "^1.0.3",
-    "spotify-web-helper": "^1.7.0"
+    "spotify-web-helper": "^1.7.1"
   },
   "devDependencies": {
     "eslint": "^3.15.0",
