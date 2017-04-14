@@ -1,3 +1,13 @@
+## 1.1.2 - Small Bug Fixes
+* Album Art was being fetched but not shown due to a variable that wasn't updated
+* A simple test would have resolved this before pushing
+
+## 1.1.1 - Album Art Improvements
+* Switched from request to native fetch for retrieving artwork information
+* Removed unnecessary pluralize library to simply add an 's' to a word
+* Optimized by converting album art fetching to `async` `await`s
+* General improvements by removing several unneeded dependencies and more asynchronity
+
 ## 1.1.0 - Major Fixer Upper
 * Been a while since the last update so this one had some major fixes to be implemented
 * Finished some unfinished changes from 1.0.1
