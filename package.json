@@ -1,10 +1,14 @@
 {
   "name": "Spatomify",
   "main": "./lib/spatomify",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A short description of your package",
   "keywords": [
-    ""
+    "atom",
+    "spotify",
+    "windows",
+    "mac",
+    "spatomify"
   ],
   "repository": "https://github.com/itotallyrock/spatomify",
   "license": "MIT",
@@ -21,10 +25,27 @@
       }
     }
   },
+  "configSchema": {
+    "showArt": {
+      "title": "Show Album Art",
+      "description": "Whether or not to display a small preview of the album art next to the song name.",
+      "type": "boolean",
+      "default": true
+    },
+    "clickAction": {
+      "title": "Click Action",
+      "description": "What command to execute when clicking the song title in the status bar.",
+      "type": "string",
+      "default": "spatomify:togglepause"
+    },
+    "colorize": {
+      "title": "Colorize",
+      "description": "Fancy color animation on the album art.",
+      "type": "boolean",
+      "default": false
+    }
+  },
   "dependencies": {
-    "pluralize": "^3.1.0",
-    "request": "^2.79.0",
-    "request-promise-native": "^1.0.3",
     "spotify-web-helper": "^1.7.1"
   },
   "devDependencies": {
