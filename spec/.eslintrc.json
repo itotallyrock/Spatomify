@@ -2,6 +2,9 @@
   "env": {
       "node": true,
       "es6": true,
-      "mocha": true
+      "jasmine": true
+  },
+  "globals": {
+    "waitsForPromise": true
   }
 }

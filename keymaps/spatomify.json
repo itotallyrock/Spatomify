@@ -1,6 +1,14 @@
 {
   "atom-workspace": {
     "ctrl-alt-s": "spatomify:toggle",
-    "ctrl-alt-p": "spatomify:togglepause"
+    "ctrl-alt-p": "spatomify:togglepause",
+    "ctrl-alt-shift-left": "spatomify:back",
+    "ctrl-alt-shift-right": "spatomify:skip"
+  },
+  "spatomify": {
+    "ctrl-space": "spatomify:togglepause",
+    "ctrl-left": "spatomify:back",
+    "ctrl-right": "spatomify:skip",
+    "ctrl-escape": "spatomify:toggle"
   }
 }

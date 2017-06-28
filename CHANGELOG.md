@@ -1,3 +1,35 @@
+## 2.0.0 - Lots of Upgrades
+* Start by prefacing that this update simply improved a lot of things
+* Added a lot of new commands
+ * `spatomify:skip`
+ * `spatomify:back`
+ * `spatomify:show`
+ * `spatomify:hide`
+ * `spatomify:toggle`
+ * `spatomify:toggle-focus`
+* Added skip/previous feature default keys are `ctrl-alt-shift-left` and `ctrl-alt-shift-right` to go back and forward respectively
+* Now uses custom element names instead of *div soup*
+* Package now closes gracefully if Spotify is closed
+ * It will also try to reopen itself if it can detect Spotify is running again
+* Added more error checking to `AlbumArt` fetching
+* Removing image fetching from `Song` as it was redundant and unnecessary
+* Serialization is now better handled
+* Added some serialization error checking for song-element
+* Refactored styling to make it more organized using nesting
+* Package is now private to prevent accidental publishing to npm
+* More methods to handle application state
+ * `shouldAttach` `createOrDestroyViewIfNeeded` and `getSongElementInstance`
+* Moved some pause handling from `spatomify.js` to `song-element.js` to keep model-view separate
+* We are now fully converted to docks
+ * This also means we now use a URI which is `atom://spatomify`
+ * Hopefully this will be the last major UI change necessary
+* More separation for MVVM
+ * Handle click events in model instead of view
+* Convert or parse old event listeners to fit disposables
+* Update SpotifyWebHelper to use the latest versions
+ * This was the major slowdown for the package being slow to activate as request has been replaced with got
+ * Also cuts back on several unneeded dependencies
+
 ## 1.1.2 - Small Bug Fixes
 * Album Art was being fetched but not shown due to a variable that wasn't updated
 * A simple test would have resolved this before pushing

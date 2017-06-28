@@ -1,29 +1,82 @@
-// The ui-variables file is provided by base themes provided by Atom.
-//
-// See https://github.com/atom/atom-dark-ui/blob/master/styles/ui-variables.less
-// for a full listing of what's available.
+
 @import "ui-variables";
 
-@status-bar-height: @component-line-height + 1px;
-
-.spatomify {}
-
-.spatomify.album-art {
-  max-width: 5vw;
-  height: 100%;
-  width: @status-bar-height;
-  background-size: 100% !important;
-}
-
-.spatomify.album-art.colorize {
-  animation: colorizer 20s linear infinite;
-}
-
+// Color album art animation
 @-webkit-keyframes colorizer {
   0%, 100%  {
     -webkit-filter: hue-rotate(0deg);
   }
   50% {
     -webkit-filter: hue-rotate(360deg);
+  }
+}
+
+atom-dock {
+  spatomify {
+    // Album art for the current song
+    song-artwork {
+      display: block;
+      width: 100%;
+      padding-bottom: 100%;
+      margin: auto;
+      // If image is too small
+      background-color: @base-background-color;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      cursor: pointer;
+      // Give animation to colorize class
+      &.colorize {
+        animation: colorizer 20s ease-in-out infinite;
+      }
+    }
+    // Details for the song
+    song-details {
+      display: block;
+      padding: 1rem 0px;
+      overflow-x: hidden;
+      word-wrap: break-word;
+      word-break: break-word;
+      overflow-wrap: break-word;
+      song-title, song-artist {
+        display: block;
+        margin: 0px 1.5rem;
+      }
+      song-title {
+        font-size: 1.5rem;
+        color: @text-color;
+      }
+      song-artist {
+        font-size: 1rem;
+        color: @text-color-subtle;
+      }
+    }
+    &.paused {
+      // Pause animation if song is paused
+      song-artwork.colorize {
+        animation-play-state: paused;
+      }
+    }
+  }
+}
+
+status-bar {
+  spatomify {
+    display: inline-block;
+    song-details {
+      cursor: pointer;
+      max-width: 15vw;
+      display: inline-block;
+      text-overflow: ellipsis;
+      word-break: break-all;
+      overflow-x: hidden;
+      song-artist {
+        &::after {
+          content: ' - ';
+        }
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }

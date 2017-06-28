@@ -1,9 +1,26 @@
 {
   "context-menu": {
-    "atom-text-editor": [
+    "spatomify": [
       {
         "label": "Toggle spatomify",
         "command": "spatomify:toggle"
+      },
+      {
+        "label": "Controls",
+        "submenu": [
+          {
+            "label": "Play/Pause",
+            "command": "spatomify:togglepause"
+          },
+          {
+            "label": "Skip/Next",
+            "command": "spatomify:skip"
+          },
+          {
+            "label": "Back/Previous",
+            "command": "spatomify:back"
+          }
+        ]
       }
     ]
   },
@@ -15,8 +32,25 @@
           "label": "Spatomify",
           "submenu": [
             {
-              "label": "Toggle",
+              "label": "Toggle spatomify",
               "command": "spatomify:toggle"
+            },
+            {
+              "label": "Controls",
+              "submenu": [
+                {
+                  "label": "Play/Pause",
+                  "command": "spatomify:togglepause"
+                },
+                {
+                  "label": "Skip/Next",
+                  "command": "spatomify:skip"
+                },
+                {
+                  "label": "Back/Previous",
+                  "command": "spatomify:back"
+                }
+              ]
             }
           ]
         }
