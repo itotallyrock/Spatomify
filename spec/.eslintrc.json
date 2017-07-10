@@ -1,10 +1,22 @@
 {
-  "env": {
-      "node": true,
-      "es6": true,
-      "jasmine": true
-  },
-  "globals": {
-    "waitsForPromise": true
-  }
+    "env": {
+        "node": true,
+        "es6": true,
+        "browser": true,
+        "jasmine": true
+    },
+    "globals": {
+        "atom": true,
+        "$": true,
+        "fetch": true
+    },
+    "extends": "standard",
+    "rules": {
+        "no-warning-comments": [
+            "warn"
+        ],
+        "no-console": [
+            "warn"
+        ]
+    }
 }
