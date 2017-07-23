@@ -1,6 +1,6 @@
 'use babel'
 
-import SpatomifyView from '../lib/spatomify-view'
+import SpatomifyView from '../lib/dock-view'
 
 describe('SpatomifyView', () => {
   it('has one valid test', () => {

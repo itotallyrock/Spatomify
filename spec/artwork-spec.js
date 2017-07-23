@@ -39,7 +39,7 @@ describe('Artwork', () => {
     expect(typeof artwork.generateCSS).toBe('function', 'generateCSS isn\'t a function')
     expect(typeof artwork.generateCSS()).toBe('string', 'generateCSS doesn\'t return a string')
     expect(artwork.generateCSS()).toMatch(/^url\(("|')(.*)("|')\)( \d+px \d+px)?;?$/g, 'isn\'t a proper css attribute')
-    expect(artwork.generateCSS()).toBe(`url("${artwork.url}") ${artwork.width}px ${artwork.height}px;`)
+    expect(artwork.generateCSS()).toBe(`url("${artwork.url}");`)
   })
   it('should have a generateHTMLImage', () => {
     expect(artwork.generateHTMLImage).toBeDefined('generateHTMLImage is undefined')
@@ -92,7 +92,7 @@ describe('DefaultArtwork', () => {
     expect(typeof artwork.generateCSS).toBe('function', 'generateCSS isn\'t a function')
     expect(typeof artwork.generateCSS()).toBe('string', 'generateCSS doesn\'t return a string')
     expect(artwork.generateCSS()).toMatch(/^url\(("|')(.*)("|')\)( \d+px \d+px)?;?$/g, 'isn\'t a proper css attribute')
-    expect(artwork.generateCSS()).toBe(`url("${artwork.url}") ${artwork.width}px ${artwork.height}px;`)
+    expect(artwork.generateCSS()).toBe(`url("${artwork.url}");`)
   })
   it('should have a generateHTMLImage', () => {
     expect(artwork.generateHTMLImage).toBeDefined('generateHTMLImage is undefined')
